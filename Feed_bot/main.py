@@ -3,9 +3,11 @@ import asyncio
 from aiogram import Bot, Dispatcher, executor
 from config import BOT_TOKEN
 
+
 loop = asyncio.get_event_loop()
 bot = Bot(BOT_TOKEN, parse_mode="HTML") # HTML can be Markdown for telegram format
 dp = Dispatcher(bot, loop=loop)
+
 
 if __name__ == "__main__":
     from handlers import dp, send_to_admin
